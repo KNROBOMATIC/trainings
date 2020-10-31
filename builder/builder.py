@@ -4,6 +4,10 @@ class House:
         pass
     def create_walls(self, color):
         self._represantation+= f"{color} walls"
+    def backyard(self, size):
+        self._representation+= f"Your backyard is {size}"
+    def roof(self, color):
+        self._represantation+= f"{color} roof"
     def __repr__(self):
         return f"house has: {self._represantation}"
 
