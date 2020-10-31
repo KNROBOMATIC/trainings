@@ -7,10 +7,19 @@ class House:
     def __repr__(self):
         return f"house has: {self._represantation}"
 
+
     @staticmethod
     def build(config):
-        house=House()
-
+        house = House()
+        for key, value in config.items():
+            if value == None:
+                continue
+            if key ==  "walls":
+                house.create_walls((value))
+            elif key == "backyard":
+                house.create_backyard(value)
+            elif key == "roof":
+                house.create_roof(value)
         return house
 
 config= {'walls': 'white', "backyard":'big'}
