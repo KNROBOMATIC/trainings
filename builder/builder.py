@@ -1,19 +1,19 @@
 class House:
     def __init__(self):
-        self._representation = ''
+        self._representation = []
         pass
 
     def create_walls(self, color):
-        self._representation += f" {color} walls"
+        self._representation.append(f" {color} walls")
 
     def create_backyard(self, size):
-        self._representation += f" {size} backyard"
+        self._representation.append(f" {size} backyard")
 
     def create_roof(self, color):
-        self._representation += f"{color} roof"
+        self._representation.append(f" {color} roof")
 
     def __repr__(self):
-        return f"house has: {self._representation}"
+        return f"House has:{','.join(self._representation)}"
 
     @staticmethod
     def build(config):
